@@ -1,7 +1,7 @@
 import {
   Impact,
   Relation,
-} from "https://raw.githubusercontent.com/ngoduyanh/nrs-lib-ts/v0.1.1/mod.ts";
+} from "../../deps.ts";
 import { rule } from "../lib.ts";
 
 export default rule("dah-sum-contain-weight", function () {

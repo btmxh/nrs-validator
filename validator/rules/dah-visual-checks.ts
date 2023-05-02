@@ -1,4 +1,4 @@
-import { VisualType } from "https://raw.githubusercontent.com/ngoduyanh/nrs-lib-ts/v0.1.1/mod.ts";
+import { VisualType } from "../../deps.ts";
 import { rule } from "../lib.ts";
 import { checkIRType } from "./common.ts";
 

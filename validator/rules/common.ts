@@ -2,7 +2,7 @@ import {
   Impact,
   Relation,
   Id,
-} from "https://raw.githubusercontent.com/ngoduyanh/nrs-lib-ts/v0.1.1/mod.ts";
+} from "../../deps.ts";
 
 export function optionalAsArray<T>(obj: T | null | undefined): T[] {
   if (obj === null || obj === undefined) return [];

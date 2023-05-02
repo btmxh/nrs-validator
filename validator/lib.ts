@@ -5,12 +5,9 @@ import {
   Id,
   Impact,
   Relation,
-} from "https://raw.githubusercontent.com/ngoduyanh/nrs-lib-ts/v0.1.1/mod.ts";
-
-import {
   WrappedIterator,
   wrapIterator,
-} from "https://deno.land/x/iterator_helpers@v0.1.2/mod.ts";
+} from "../deps.ts";
 
 export type ValidationCallback = (this: ValidationContext) => void;
 
