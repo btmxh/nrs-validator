@@ -21,7 +21,10 @@ export default rule("dah-no-dropped-impact", function () {
   );
 
   for (const entryId of hasDroppedImpactEntries) {
-    if (!hasDroppedStatusEntries.has(entryId)) {
+    if (
+      !hasDroppedStatusEntries.has(entryId) &&
+      this.isNotIgnored(this.getEntry(entryId)!)
+    ) {
       this.warn(
         `entry '${entryId}' has a dropped impact but its status is not 'Dropped'`
       );
