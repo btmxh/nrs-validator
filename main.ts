@@ -1,4 +1,4 @@
-import { deserializeBulk } from "https://raw.githubusercontent.com/ngoduyanh/nrs-lib-ts/v0.1.1/mod.ts";
+import { deserializeBulk } from "./deps.ts";
 import { ValidationContext } from "./validator/lib.ts";
 import dahCheckCustomId from "./validator/rules/dah-check-custom-id.ts";
 import dahEntryNoConsumed from "./validator/rules/dah-entry-no-consumed.ts";

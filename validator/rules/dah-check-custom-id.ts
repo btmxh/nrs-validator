@@ -1,4 +1,4 @@
-import { assert } from "https://raw.githubusercontent.com/ngoduyanh/nrs-lib-ts/v0.1.1/mod.ts";
+import { assert } from "../../deps.ts";
 import { rule } from "../lib.ts";
 import { optionalAsArray } from "./common.ts";
 // @deno-types="npm:@types/luxon"
