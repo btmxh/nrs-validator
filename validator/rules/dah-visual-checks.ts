@@ -8,7 +8,7 @@ export default rule("dah-visual-checks", function () {
       (impact) =>
         checkIRType(impact, "visual") &&
         // deno-lint-ignore no-explicit-any
-        (impact.DAH_meta as any).visualArgs.visualType === visualKind
+        (impact.DAH_meta as any).DAH_ir_source.visualArgs.visualType === visualKind
     );
   };
 
