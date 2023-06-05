@@ -4,6 +4,7 @@ import dahCheckCustomId from "./validator/rules/dah-check-custom-id.ts";
 import dahEntryNoConsumed from "./validator/rules/dah-entry-no-consumed.ts";
 import dahInvalidId from "./validator/rules/dah-invalid-id.ts";
 import dahLonePads from "./validator/rules/dah-lone-pads.ts";
+import dahNoAnimeAltsrc from "./validator/rules/dah-no-anime-altsrc.ts";
 import dahNoBestGirl from "./validator/rules/dah-no-best-girl.ts";
 import dahNoDroppedImpact from "./validator/rules/dah-no-dropped-impact.ts";
 import dahNoProgress from "./validator/rules/dah-no-progress.ts";
@@ -18,6 +19,7 @@ const rules = [
   dahEntryNoConsumed,
   dahInvalidId,
   dahLonePads,
+  dahNoAnimeAltsrc,
   dahNoBestGirl,
   dahNoDroppedImpact,
   dahNoProgress,
