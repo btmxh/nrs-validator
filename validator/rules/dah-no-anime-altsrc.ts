@@ -5,7 +5,10 @@ export default rule("dah-no-anime-altsrc", function () {
     .filter((entry) => {
       // deno-lint-ignore no-explicit-any
       const altsrc = (entry.DAH_meta as any).DAH_additional_source;
-      if (altsrc === undefined || !entry.id.startsWith("A")) {
+      if (!entry.id.startsWith("A")) {
+        return false;
+      }
+      if (altsrc === undefined) {
         return true;
       }
       return (
