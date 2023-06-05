@@ -5,12 +5,12 @@ export default rule("dah-no-anime-altsrc", function () {
     .filter((entry) => {
       // deno-lint-ignore no-explicit-any
       const altsrc = (entry.DAH_meta as any).DAH_additional_source;
-      if (altsrc === undefined) {
+      if (altsrc === undefined || !entry.id.startsWith("A")) {
         return true;
       }
       return (
         ["id_AniDB", "id_Kitsu", "id_MyAnimeList", "id_AniList"].filter(
-          (key) => altsrc[key]
+          (key) => altsrc[key] === undefined
         ).length > 0
       );
     })
