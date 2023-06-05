@@ -4,7 +4,7 @@ export default rule("dah-no-anime-altsrc", function () {
   this.entries()
     .filter((entry) => {
       // deno-lint-ignore no-explicit-any
-      const altsrc = (entry.DAH_meta as any).DAH_additional_source;
+      const altsrc = (entry.DAH_meta as any).DAH_additional_sources;
       if (!entry.id.startsWith("A")) {
         return false;
       }
