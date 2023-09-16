@@ -3,7 +3,7 @@ import { StandardEntryType } from "../../deps.ts";
 import { rule } from "../lib.ts";
 
 export default rule("dah-music-role-on-non-tracks", function () {
-  this.allEntries()
+  this.entries()
     .filter(
       (e) =>
         e.DAH_meta.DAH_entry_type !== StandardEntryType.MusicTrack &&
