@@ -2,7 +2,7 @@ import { AtomicRoleType } from "https://raw.githubusercontent.com/ngoduyanh/nrs-
 import { StandardEntryType } from "../../deps.ts";
 import { rule } from "../lib.ts";
 
-export default rule("dah-forbid-generic-types", function () {
+export default rule("dah-music-role-on-non-tracks", function () {
   this.allEntries()
     .filter(
       (e) =>
