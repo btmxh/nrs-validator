@@ -1,9 +1,9 @@
 import { rule } from "../lib.ts";
-import { checkIRType, consumableEntryID } from "./common.ts";
+import { checkIRType, consumableEntry } from "./common.ts";
 
 export default rule("dah-entry-no-consumed", function () {
   const consumableEntries = this.entries()
-    .filter((entry) => consumableEntryID(entry.id))
+    .filter(consumableEntry)
     .toArray();
 
   const consumedEntries = new Set(

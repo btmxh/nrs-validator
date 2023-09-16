@@ -2,8 +2,10 @@ import { deserializeBulk } from "./deps.ts";
 import { ValidationContext } from "./validator/lib.ts";
 import dahCheckCustomId from "./validator/rules/dah-check-custom-id.ts";
 import dahEntryNoConsumed from "./validator/rules/dah-entry-no-consumed.ts";
+import dahForbidGenericTypes from "./validator/rules/dah-forbid-generic-types.ts";
 import dahInvalidId from "./validator/rules/dah-invalid-id.ts";
 import dahLonePads from "./validator/rules/dah-lone-pads.ts";
+import dahMusicRoleOnNonTracks from "./validator/rules/dah-music-role-on-non-tracks.ts";
 import dahNoAnimeAltsrc from "./validator/rules/dah-no-anime-altsrc.ts";
 import dahNoBestGirl from "./validator/rules/dah-no-best-girl.ts";
 import dahNoDroppedImpact from "./validator/rules/dah-no-dropped-impact.ts";
@@ -28,6 +30,8 @@ const rules = [
   dahSumContainWeight,
   dahVisualChecks,
   dahVisuallessEntry,
+  dahForbidGenericTypes,
+  dahMusicRoleOnNonTracks,
 ];
 
 if (Deno.args.length < 1) {

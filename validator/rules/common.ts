@@ -1,8 +1,4 @@
-import {
-  Impact,
-  Relation,
-  Id,
-} from "../../deps.ts";
+import { Impact, Relation, Entry, StandardEntryType } from "../../deps.ts";
 
 export function optionalAsArray<T>(obj: T | null | undefined): T[] {
   if (obj === null || obj === undefined) return [];
@@ -14,7 +10,15 @@ export function checkIRType(ir: Impact | Relation, type: string): boolean {
   return (ir.DAH_meta as any).DAH_ir_source?.name === type;
 }
 
-export function consumableEntryID(id: Id): boolean {
-  // albums are not consumable, since it's just a collection of tracks
-  return "ALV".includes(id[0]) || /M-VGMDB-AL-\d+-\d+/g.test(id) || /M-\d+/.test(id);
+export function consumableEntry(entry: Entry): boolean {
+  return [
+    StandardEntryType.Anime,
+    StandardEntryType.LightNovel,
+    StandardEntryType.Manga,
+    StandardEntryType.LightNovelGeneric,
+    StandardEntryType.MusicGeneric,
+    StandardEntryType.MusicAlbumTrack,
+    // albums are not consumable, since it's just a collection of tracks
+    StandardEntryType.MusicTrack,
+  ].includes(entry.DAH_meta.DAH_entry_type as StandardEntryType);
 }
