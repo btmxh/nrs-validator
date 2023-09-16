@@ -7,11 +7,11 @@ export default rule("dah-forbid-generic-types", function () {
       (entry) =>
         entry.DAH_meta.DAH_entry_type === StandardEntryType.LightNovelGeneric
     )
-    .forEach((id) => this.warn(`Entry with LightNovelGeneric type: '${id}'`));
+    .forEach((e) => this.warn(`Entry with LightNovelGeneric type: '${e.id}'`));
   this.allEntries()
     .filter(
       (entry) =>
         entry.DAH_meta.DAH_entry_type === StandardEntryType.MusicGeneric
     )
-    .forEach((id) => this.warn(`Entry with MusicGeneric type: '${id}'`));
+    .forEach((e) => this.warn(`Entry with MusicGeneric type: '${e.id}'`));
 });
