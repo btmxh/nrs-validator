@@ -15,6 +15,6 @@ export default rule("dah-visualless-entry", function () {
 
 
   [...entries]
-    .filter((id) => "ALVG".includes(id[0]) && /M-VGMDB-AL-\d+/.test(id))
+    .filter((id) => "ALVG".includes(id[0]) || /^M-VGMDB-AL-\d+$/.test(id))
     .forEach((id) => this.warn(`entry '${id}' doesn't have any visual impact`));
 });
